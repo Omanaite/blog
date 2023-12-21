@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "El Padrino",
+    "año": 1972,
+    "director": "Francis Ford Coppola",
+    "genero": "Drama",
+    "puntuacion": 9.2
+  },
+  {
+    "titulo": "El señor de los anillos: La comunidad del anillo",
+    "año": 2001,
+    "director": "Peter Jackson",
+    "genero": "Fantasia",
+    "puntuacion": 9.0
+  },
+  {
+    "titulo": "Pulp Fiction",
+    "año": 1994,
+    "director": "Quentin Tarantino",
+    "genero": "Crimen",
+    "puntuacion": 8.9
+  }
+]
