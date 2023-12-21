@@ -1,23 +1,42 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import Article from "../components/article"
+import Title from "../components/article";
 
-const loadDataFromServer = async ()=> {
-    const response = await fetch("http://localhost:4000/books");
-    console.log(response)
-    return response.json()
-}
+const loadDataFromServer = async () => {
+  const response = await fetch("http://localhost:4008/books");
+  console.log(response);
+
+  return response.json();
+};
 
 export default async () => {
-  const articles = await loadDataFromServer()
-  return (<>
-      <h1>My blog</h1>
-      {articles.map( (p:any) => <Article key={p.id} {...p}/>)}
-  </>)
-}
+  const articles = await loadDataFromServer();
+  return (
+    <>
+    <div className="flex-col">
+    <div className="flex gap-4">
+        <div className="w-48">Id</div>
+        <div className="w-48">Author</div>
+        <div className="w-48">Title</div>
+        <div className="w-48">Owner</div>
+        <div className="w-48">Language</div>
+        <div className="w-48">OTB</div>
+        <div className="w-48">Publisher</div>
+        <div className="w-48">Year</div>
+        {/* <div className="w-48">9</div> */}
+        {/* <div className="w-48">10</div> */}
+      </div>
+      <div className="">
+        {articles.map((p: any) => (
+          <Title key={p.owner} {...p} />
+        ))}
+      </div>
+    </div>
+    </>
+  );
+};
 
 //  fetch("../api/prueba.json");
-
 
 // import Article from "../components/article"
 
@@ -36,13 +55,12 @@ export default async () => {
 //   </>)
 // }
 
-
 // export default function SearchLayout({
 //   children, // will be a page or nested layout
 // }: {
 //   children: React.ReactNode;
 // }) {
-  
+
 //   const router = useRouter();
 //   const [query, setQuery] = useState('')
 
