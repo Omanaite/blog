@@ -3,7 +3,7 @@ import { useState } from "react";
 import Article from "../components/article"
 
 const loadDataFromServer = async ()=> {
-    const response = await fetch("http://localhost:3000/api/db");
+    const response = await fetch("http://localhost:4000/books");
     console.log(response)
     return response.json()
 }
